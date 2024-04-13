@@ -1,13 +1,33 @@
 console.log("Ola mundo!")
 
-var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
+function moverElementonao() {
+  var elemento = document.getElementById('nao');
 
-function changeBackground() {
+  var transformValue = window.getComputedStyle(elemento).getPropertyValue('transform');
+  var matrix = new WebKitCSSMatrix(transformValue);
+  var newX = matrix.m41 + 100; // Move 100 pixels para a direita (altere conforme necessário)
+  elemento.style.transform = 'translateX(' + newX + 'px)';
   
-  var randomIndex = Math.floor(Math.random() * colors.length);
- 
-  document.body.style.backgroundColor = colors[randomIndex];
+
+
+}
+
+
+function botaosim() {
+  var body = document.getElementById('body')
+  var imagem = document.getElementById('imagem09');
+  var nao = document.getElementById('nao')
+  var texto = document.getElementById('texto555')
+
+
+  body.style.backgroundColor = 'pink';
+  imagem.style.display = 'block';
+  nao.style.display = 'none';
+  texto.style.color = 'red';
+
+
 }
 
 
 setInterval(changeBackground, 1000); 
+
