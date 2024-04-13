@@ -1,14 +1,17 @@
 console.log("Ola mundo!")
 
-
-fetch('https://www.google.com.br/')
-  .then((response) => {
-    if (response.ok) {
-      console.log('Status code 200: OK');
-    } else {
-      console.error('Erro ao buscar a página:', response.status);
+function blink() {
+    var element = document.getElementById('body');
+    var isVisible = true;
+  
+   
+    function toggleVisibility() {
+      isVisible = !isVisible;
+      element.style.visibility = isVisible ? 'visible' : 'hidden';
     }
-  })
-  .catch((error) => {
-    console.error('Erro ao buscar a página:', error);
-  });
+
+    setInterval(toggleVisibility, 500); 
+  }
+  
+  
+  window.onload = blink;
