@@ -18,12 +18,14 @@ function botaosim() {
   var imagem = document.getElementById('imagem09');
   var nao = document.getElementById('nao')
   var texto = document.getElementById('texto555')
+  var imggay = document.getElementById('imagegay')
 
 
   body.style.backgroundColor = 'pink';
   imagem.style.display = 'block';
   nao.style.display = 'none';
   texto.style.color = 'red';
+  imggay.style.display = 'none';
 
 
 }
