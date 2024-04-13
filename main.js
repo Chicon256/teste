@@ -5,13 +5,13 @@ function blink() {
     var isVisible = true;
   
    
-    function toggleVisibility() {
-      isVisible = !isVisible;
-      element.style.visibility = isVisible ? 'visible' : 'hidden';
-    }
+  //   function toggleVisibility() {
+  //     isVisible = !isVisible;
+  //     element.style.visibility = isVisible ? 'visible' : 'hidden';
+  //   }
 
-    setInterval(toggleVisibility, 500); 
-  }
+  //   setInterval(toggleVisibility, 500); 
+  // }
   
   
-  window.onload = blink;
+  // window.onload = blink;
