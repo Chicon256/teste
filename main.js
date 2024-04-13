@@ -1,17 +1,13 @@
 console.log("Ola mundo!")
 
-function blink() {
-    var element = document.getElementById('body');
-    var isVisible = true;
-  
-   
-    function toggleVisibility() {
-      isVisible = !isVisible;
-      element.style.visibility = isVisible ? 'visible' : 'hidden';
-    }
+var colors = ["#ff0000", "#00ff00", "#0000ff", "#ffff00", "#00ffff", "#ff00ff"];
 
-    setInterval(toggleVisibility, 500); 
-  }
+function changeBackground() {
   
-  
-  window.onload = blink;
+  var randomIndex = Math.floor(Math.random() * colors.length);
+ 
+  document.body.style.backgroundColor = colors[randomIndex];
+}
+
+
+setInterval(changeBackground, 1000); 
